@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/About Project.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;1,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Project</title>
+    <style>
+        /*####### Defaults #######*/
+nav, header, footer{
+    display: block;
+}
+
+body{
+    line-height: 1;
+    margin: 0;
+}
+/*####### Nav Bar #######*/
+nav{
+    width: 100%;
+    margin: 0;
+}
+nav ul{
+    background-color: #eee;
+    overflow: hidden;
+    margin:0;
+    padding: 0;
+
+}
+nav .topnav li{
+    list-style: none;
+    float: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+ul.topnav li.topnav-right{
+    background-color: #a5a5a5;
+    float: right;
+}
+ul.topnav li.topnav-right a{
+    color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+ul.topnav li a{
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+ul.topnav li a:hover {
+    background-color: #5c5d5f;
+    /* border-radius: 4px; */
+    color: #fff;
+}
+ul.topnav li.dropdownIcon{
+    display: none;
+}
+/* #########body custom syle######## */
+.container{
+    width: 100%;
+    margin:auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+#section-1-gradient{
+    background: #a5a5a5;
+    background: linear-gradient( #eee,rgb(126, 126, 126));
+}
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row::after{
+    display: table;
+    clear: both;
+    content: "";
+}
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+/*
+[class*=col-] {
+    border: 2px solid black;
+    padding: 15px;
+    float: left;
+} */
+.header h1{
+    margin-left: 2%;
+    color: black;
+}
+#section-1-gradient .row .col-9 h1.large{
+    color: rgb(0, 0, 0);
+    font-size: 56px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.leftSideDown-col h1{
+    font-size: 45px;
+    color: rgb(0, 0, 0);
+    margin-left: 2%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.leftSideDown-col h2{
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    margin-left: 2%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.probS h5{
+    font-size: 28px;
+    color: rgb(66, 66, 66);
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+}
+img{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin-left: 5%;
+}
+.probSImg img{
+    width: 100%;
+    height: auto;
+    padding: 0%;
+    margin-left: 10;
+}
+
+
+
+
+/* ####### Section-3 ######## */
+
+footer.footsy{
+    
+    padding-left: 10%;
+}
+.med{
+    background: #a5a5a5;
+    background: linear-gradient( rgb(126,126,126),rgb(207, 207, 207));
+}
+hr{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+footer.footsy h2{
+    color: white;
+    font-size: 35px;
+}
+footer.footsy ul{
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+}
+footer.footsy li{
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.mobileStatck{
+    padding-left: 50px;
+}
+.mobileStatck2 h3{
+    color: white;
+}
+
+
+footer.footsy ul a{
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.lastA{
+    text-decoration: none;
+}
+
+
+pre {
+    color: black;
+    font-size: 15px;
+}
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0px 100px 0px 100px;
+    font-size: 13px;
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.code , pre {
+    padding: 0 3px 2px;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    font-size: 12px;
+    color: #333;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+/* ######## Mobile ######## */
+@media screen and (max-width: 680px) {
+        ul.topnav li:not(:first-child) 
+        {display: none;}
+        ul.topnav li.dropdownIcon {
+            float: right;
+            display: block;
+        }
+
+    ul.topnav.responsive li.dropdownIcon{
+        position:absolute;
+        top:0;
+        right: 0;
+    }
+    ul.topnav.responsive{
+        position: relative;
+
+    }
+    ul.topnav.responsive li{
+        display: inline;
+        float: none;
+    }
+    ul.topnav.responsive li a{
+        display: block;
+        text-align: left;
+    }
+    ul.topnav.responsive li.topnav-right{
+        background-color: #a5a5a5;
+        display: block;
+        text-align: left;
+    }
+    .col-6 , .col-4, .col-7 , .col-5,.col-8, .col-9 {
+        width: 100%;
+        margin: 0;
+    }
+    .col-3 {
+        width: 100%;
+        margin: 0px;
+    }
+    .col-3 img{
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+    div.mobileStatck{
+        width:50%;
+        margin: 0;
+    }
+    div.mobileStatck2{
+        width:100%;
+        margin: 0;
+        margin-left: 40px;
+    }
+    footer.footsy{
+        margin: 0;
+        padding: 0;
+    }
+    .probS h5{
+        margin: 0px 5px 0px 5px;
+        font-size: 22px;
+    }
+    #section-1-gradient .row .col-9 h1.large {
+        color: rgb(0, 0, 0);
+        font-size: 32px;
+    }
+    .leftSideDown-col h1{
+        font-size: 28px;
+        color: rgb(0, 0, 0);
+        margin-left: 2%;
+    }
+    .leftSideDown-col h2{
+        font-size: 25px;
+        color: rgb(0, 0, 0);
+        margin-left: 2%;
+    }
+    div.box{
+        display: block;
+        padding: 5px;
+    }
+    pre{
+        margin:10px
+    }
+    
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="topnav" id="dropdownClick">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="aboutProject.html">About Project</a>
+            </li>
+            <li>
+                <a href="screenSnaps.html">Screen Snaps</a>
+            </li>
+
+            <li class="topnav-right">
+                <a href="about.html">About Us</a>
+            </li>
+            <li class="dropdownIcon">
+                <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container" id="section-1-gradient">
+        <div class="row">
+            <div class="col-9 leftSide-col">
+                <div class="header">
+                    <h1 class="large">About Project</h1>
+
+                </div>
+                <br>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-9 leftSideDown-col mheader">
+                <h1 class="large1">Clustering</h1>
+                <br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 probS">
+                <h5 class="large2">
+                    It is basically a type of unsupervised learning method . An unsupervised learning method is a method
+                    in which we draw references from datasets consisting of input data without labelled responses.
+                    Generally, it is used as a process to find meaningful structure, explanatory underlying processes,
+                    generative features, and groupings inherent in a set of examples.
+                    Clustering is the task of dividing the population or data points into a number of groups such that
+                    data points in the same groups are more similar to other data points in the same group and
+                    dissimilar to the data points in other groups. It is basically a collection of objects on the basis
+                    of similarity and dissimilarity between them.
+                    <br>
+                    For ex– The data points in the graph below clustered together can be classified into one single
+                    group. We can distinguish the clusters, and we can identify that there are 3 clusters in the below
+                    picture.</h5>
+                <br>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="col-10 probSImg">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/merge3cluster.jpg" alt="">
+        </div>
+
+
+        <div class="row">
+            <div class="col-9 leftSideDown-col mheader">
+                <h1 class="large1">Why Clustering ?</h1>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 probS">
+                <h5>
+                    Clustering is very much important as it determines the intrinsic grouping among the unlabeled data
+                    present.
+                    There are no criteria for a good clustering. It depends on the user, what is the criteria they may
+                    use which
+                    satisfy their need. For instance, we could be interested in finding representatives for homogeneous
+                    groups (data
+                    reduction), in finding “natural clusters” and describe their unknown properties (“natural” data
+                    types), in
+                    finding useful and suitable groupings (“useful” data classes) or in finding unusual data objects
+                    (outlier
+                    detection). This algorithm must make some assumptions which constitute the similarity of points and
+                    each
+                    assumption make different and equally valid clusters.
+                </h5>
+                <br>
+            </div>
+            <div class="col-3 probS2">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/k-means-copy.jpg" alt="">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-9 leftSideDown-col mheader">
+                <h1 class="large1">K means Clustering</h1>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 probS">
+                <h5>
+                    We are given a data set of items, with certain features, and values for these features (like a
+                    vector).
+                    The task
+                    is to categorize those items into groups. To achieve this, we will use the kMeans algorithm; an
+                    unsupervised
+                    learning algorithm.
+                </h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-9 leftSideDown-col mheader">
+                <h1 class="large1">Overview</h1>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 probS">
+                <h5>
+                    (It will help if you think of items as points in an n-dimensional space). The algorithm will
+                    categorize
+                    the
+                    items into k groups of similarity. To calculate that similarity, we will use the euclidean distance
+                    as
+                    measurement.
+                </h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9 leftSideDown-col mheader1">
+                <h2 class="large1">The algorithm works as follows:</h2>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 probS">
+                <h5>
+                    1. First we initialize k points, called means, randomly.
+                    <br>
+                    2. We categorize each item to its closest mean and we update the mean’s coordinates, which are the
+                    averages
+                    of the items categorized in that mean so far.
+                    <br>
+                    3. We repeat the process for a given number of iterations and at the end, we have our clusters.
+                    The “points” mentioned above are called means, because they hold the mean values of the items
+                    categorized in it.
+                    <br>
+                    <br>
+
+
+                    To initialize these means, we have a lot of options. An intuitive method is to initialize the means
+                    at
+                    random
+                    items in the data set. Another method is to initialize the means at random values between the
+                    boundaries
+                    of the
+                    data set (if for a feature x the items have values in [0,3], we will initialize the means with
+                    values
+                    for x at
+                    [0,3]).
+                </h5>
+            </div>
+        </div>
+<hr>
+        <div class="row">
+            <div class="col-9 leftSideDown-col mheader">
+                <h1 class="large1">Source Code</h1>
+                <br>
+            </div>
+        </div>
+        <pre>
+            <div class="row">
+                <div class="col-12 code">
+ import pandas as pd
+ import numpy as np
+ import matplotlib.pyplot as plt
+ %matplotlib inline 
+
+ data = pd.read_csv("Population_Data.csv")
+ data.info()
+
+                
+            
+ data.head(11)
+ 
+ numeric = ["Indians","Foreigners",
+     "Indian_Male","Indian_Female",
+     "Foreigners_Female",
+     'Foreigners_Male',"Total Population"]
+
+ def cleaner(z):
+ return z.replace(',','')
+
+ cleaner('100,234')
+
+  for i in data[numeric]:
+ data[i] = data[i].apply(cleaner)
+
+ data.head()
+
+ data.info()
+
+ data[numeric] = data[numeric].apply(pd.to_numeric)
+ data.info()
+
+ data[['Indians','Foreigners']].sum().sum() - data['Total Population'].sum()
+
+ data[['Indian_Male','Indian_Female',"Foreigners_Male",'Foreigners_Female']].sum().sum() - data['Total Population'].sum()
+
+ MF_sum = data['Indian_Male'] + data['Indian_Female'] + data["Foreigners_Male"] + data['Foreigners_Female']
+ data['other'] = data['Total Population'] - MF_sum
+ data.head()
+
+ data['Region'].nunique(),data['Office Location Id'].nunique()
+
+ data1 = data.drop(columns = ['Region',"Office Location Id", 'Total Population'])
+ data1.head()
+
+ from sklearn.preprocessing import Normalizer
+ norm = Normalizer()
+ columns = data1.columns
+ data1 = norm.fit_transform(data1)
+
+ data1 = pd.DataFrame(data1, columns = columns)
+ data1.head()
+
+ from sklearn.cluster import KMeans
+ kmeans = KMeans(n_clusters=2)
+ kmeans.fit(data1)
+ pred=kmeans.predict(data1)
+
+ pd.Series(pred).value_counts()
+
+ kmeans.inertia_
+
+ kmeans.score(data1)
+
+ SSE = []
+ for cluster in range(1,10):
+     kmeans = KMeans(n_jobs = -1, n_clusters = cluster)
+     kmeans.fit(data1)
+     SSE.append(kmeans.inertia_)
+
+ frame = pd.DataFrame({'Cluster':range(1,10), 'SSE':SSE})
+
+ plt.figure(figsize=(12,6))
+ plt.plot(frame['Cluster'], frame['SSE'], marker='o')
+ plt.xlabel('Number of clusters')
+ plt.ylabel('Inertia')
+
+ kmeans = KMeans(n_clusters=3)
+ kmeans.fit(data1)
+ pred=kmeans.predict(data1)
+
+ data1['cluster'] = pred
+
+ def seg(str_x, str_y, clusters):
+ x = []
+ y = []
+
+ for i in range(clusters):
+     x.append(data1[str_x][data1['cluster']==i])
+     y.append(data1[str_y][data1['cluster']==i])
+ 
+ return x,y
+
+ def plot_clusters(str_x, str_y, clusters):
+ plt.figure(figsize = (5,5), dpi = 120)
+ 
+ x,y = seg(str_x, str_y, clusters)
+
+ for i in range(clusters):
+     plt.scatter(x[i], y[i], label = 'cluster{}'.format(i))
+ 
+ plt.xlabel(str_x)
+ plt.ylabel(str_y)
+ plt.title(str(str_x+" Vs "+str_y))
+ plt.legend()
+
+ plot_clusters('Indians', 'Foreigners',3)
+
+ plot_clusters('Indian_Male', 'Foreigners_Male',3)
+
+ plot_clusters('Indian_Female', 'Foreigners_Female',3)
+
+ plot_clusters('other', 'Indians',3)
+
+
+                </div>
+            </div>
+        </pre>
+    </div>
+
+
+
+
+
+
+
+
+
+    <hr class="hr1">
+    <div class="med">
+        <br>
+
+        <footer class="footsy">
+            <div class="row">
+                <div class="col-9 mobileStatck">
+                    <h2>Thanks</h2>
+                    <ul>
+                        <a href="aboutProject.html " class="lastA">
+                            <li>About Project</li>
+                        </a>
+                        <a href="screenSnaps.html" class="lastA">
+                            <li>ScreenSnaps</li>
+                        </a>
+                        <a href="about.html" class="lastA">
+                            <li>About us</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-3 mobileStatck2">
+                    <h3>@Copyright Protected 2020</h3>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+    <script>
+        function dropdownMenu() {
+            var x = document.getElementById("dropdownClick");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                //    change topnav to topnav.responsive
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
