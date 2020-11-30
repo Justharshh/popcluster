@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 from flask import Flask, request, render_template
 import joblib
-from matplotlib import pyplot as plt
 
 
 app = Flask(__name__)
