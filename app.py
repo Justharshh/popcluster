@@ -89,8 +89,7 @@ def predict():
     # Adding the data 
     for i in range(1, len(a)) : 
         t.add_row(a[i].split(',')) 
-    
-    code = t.get_html_string() 
+    code = t.get_html_string(attributes={"name":"my_table", "class":"red_table", "style":"border:2px solid black"}) 
     html_file = open('templates/Tablee.html', 'w') 
     html_file = html_file.write(code) 
 

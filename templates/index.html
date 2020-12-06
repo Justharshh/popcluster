@@ -163,13 +163,13 @@
             margin-left: 7%;
         }
 
-        #section-1-gradient .row .col-9 h1.large {
+        #section-1-gradient .row .col-12 h1.large {
             color: white;
             font-size: 56px;
             font-family: 'Raleway', sans-serif;
             font-weight: 700;
             line-height: 1.2;
-            margin-left: 7%;
+            margin-left: 3.5%;
         }
         .header h5{
             color: rgb(0, 0, 0);
@@ -177,7 +177,6 @@
             font-family: 'Raleway', sans-serif;
             font-weight: 300;
             line-height: 1.2;
-            margin-left: 45%; 
         }
 
         .form1 {
@@ -325,7 +324,7 @@
         .mobileStatck2 h3 {
             color: white;
             font-family: 'Raleway', sans-serif;
-            font-weight: 500;
+            font-weight: 200;
             line-height: 1.2;
         }
 
@@ -364,6 +363,7 @@
             ul.topnav li.dropdownIcon {
                 float: right;
                 display: block;
+                font-size: 20px;
             }
 
             ul.topnav.responsive li.dropdownIcon {
@@ -397,7 +397,8 @@
             .col-4,
             .col-7,
             .col-5,
-            .col-9 {
+            .col-9
+            .col-12 {
                 width: 100%;
                 margin: 0;
             }
@@ -459,8 +460,8 @@
                 margin: 0;
             }
 
-            #section-1-gradient .row .col-9 h1.large {
-                margin-left: 0;
+            #section-1-gradient .row .col-12 h1.large {
+                margin: 0;
             }
             .header h5{
                 margin-left: 0;
@@ -473,7 +474,7 @@
     <nav>
         <ul class="topnav" id="dropdownClick">
             <li>
-                <a href="index.html">Home</a>
+                <a href="index.html">popcluster</a>
             </li>
             <li>
                 <a href="aboutProject.html">About Project</a>
@@ -498,13 +499,11 @@
     <div class="login">
         <div class="container" id="section-1-gradient">
             <div class="row">
-                <div class="col-9 leftSide-col">
+                <div class="col-12 leftSide-col">
                     <div class="header">
-                        <h5 class="small">{{alert}}</h5>
+                        <center><h5 class="small">{{alert}}</h5></center>
                         <h1 class="large">Population Data Clustering</h1>
                     </div>
-                    <br>
-                    <br>
                     <br>
                 </div>
             </div>
@@ -516,7 +515,7 @@
                                 <h2>Indians</h2>
                                 <input class="inputbox" type="number" required="required" placeholder="Number of Indians" name="indians">
                                 <h2>Foreigners</h2>
-                                <input class="inputbox" type="number" required="required"  placeholder="Foreigners" name="foreigners">
+                                <input class="inputbox" type="number" required="required"  placeholder="Numbers of Foreigners" name="foreigners">
                                 <h2>Indian Males</h2>
                                 <input class="inputbox" type="number" required="required" placeholder="Number of Indian Males"
                                     name="indians_male">
