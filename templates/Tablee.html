@@ -1,28 +1,90 @@
-<table name="my_table" class="red_table" style="border:2px solid black">
-    <thead>
-        <tr>
-            <th></th>
-            <th>Indians</th>
-            <th>Foreigners</th>
-            <th>Indians male</th>
-            <th>Indian Females</th>
-            <th>Foreigners Male</th>
-            <th>Foreigners Females</th>
-            <th>Others</th>
-            <th>Predicted Output<br></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>0</td>
-            <td>46515</td>
-            <td>15</td>
-            <td>515</td>
-            <td>415</td>
-            <td>515</td>
-            <td>151</td>
-            <td>5</td>
-            <td>2<br></td>
-        </tr>
-    </tbody>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;1,700&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <style>
+        .logout{
+            padding-left: 95%;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 7px;
+        }
+        .logout a{
+            text-decoration: none;
+        }
+
+        .tableResult {
+            padding-right: 10px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td{
+            font-weight: 600;
+        }
+
+        .tableResult td,
+        .tableResult th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .tableResult tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .tableResult tr:hover {
+            background-color: #ddd;
+        }
+
+        .tableResult th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #949494;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table">
+        <div class="logout">
+            <a href="login.html">Log Out</a>
+        </div>
+        <table name="my_table" class="tableResult">
+            <tr>
+                <th> Indians </th>
+                <th> Foreigners </th>
+                <th> Indian Males </th>
+                <th> Indian Females </th>
+                <th> Foreigner Males </th>
+                <th> Foreigners Females </th>
+                <th> Others </th>
+                <th> Cluster </th>
+            </tr>
+            {% for user in userDetails %}
+            <tr>
+                <td> {{ user[0] }}</td>
+                <td> {{ user[1] }}</td>
+                <td> {{ user[2] }}</td>
+                <td> {{ user[3] }}</td>
+                <td> {{ user[4] }}</td>
+                <td> {{ user[5] }}</td>
+                <td> {{ user[6] }}</td>
+                <td> {{ user[7] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
