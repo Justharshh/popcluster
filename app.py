@@ -90,7 +90,7 @@ def login():
         if request.form['username'] != 'popcluster' or request.form['password'] != 'popcluster':
             error = 'Invalid Credentials. Please try again.'
         else:
-            return render_template('Tablee.html',userDetails=userDetails)
+            return render_template('Table.html',userDetails=userDetails)
     return render_template('login.html', error=error)
     
 
