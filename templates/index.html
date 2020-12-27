@@ -4,17 +4,568 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;1,700&display=swap"
         rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Population Data Clustering</title>
-    <link rel="stylesheet" href="static/index.css">
+    <style>
+        /* ####### Defaults ####### */
+        nav,
+        header,
+        footer {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+            margin: 0;
+        }
+
+
+        /*####### Nav Bar #######*/
+        nav {
+            width: 100%;
+            margin: 0;
+        }
+
+        nav ul {
+            background-color: #eee;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        nav .topnav li {
+            list-style: none;
+            float: left;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        ul.topnav li.topnav-right {
+            background-color: #a5a5a5;
+            float: right;
+        }
+
+        ul.topnav li.topnav-right a {
+            color: rgb(255, 255, 255);
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        ul.topnav li a {
+            display: block;
+            text-decoration: none;
+            min-height: 16px;
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+            color: #666;
+        }
+
+        ul.topnav li a:hover {
+            background-color: #5c5d5f;
+            transition-duration: 0.1 s;
+            /* border-radius: 4px; */
+            color: #fff;
+        }
+
+        ul.topnav li.dropdownIcon {
+            display: none;
+        }
+
+        /* #########body custom syle######## */
+        .container {
+            width: 100%;
+            margin: auto;
+            padding-top: 4%;
+            padding-bottom: 4%;
+        }
+
+        #section-1-gradient {
+            background: #a5a5a5;
+            background: linear-gradient(#eee, rgb(126, 126, 126));
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .row::after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /*
+[class*=col-] {
+    border: 2px solid black;
+    padding: 15px;
+    float: left;
+} */
+        .header {
+            margin-left: 7%;
+        }
+
+        #section-1-gradient .row .col-12 h1.large {
+            color: white;
+            font-size: 56px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-left: 3.5%;
+            width: 25rem
+        }
+
+        /* h1 {
+        font-size: 72px;
+        background: -webkit-linear-gradient(45deg, #ffffff, #ecea41);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }  */
+        /* Style the rainbow text element. */
+        .rainbow-text {
+            /* Create a conic gradient. */
+            /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+            background: #CA4246;
+            background-color: #CA4246;
+            background: conic-gradient(#CA4246 16.666%,
+                    #E16541 16.666%,
+                    #E16541 33.333%,
+                    #F18F43 33.333%,
+                    #F18F43 50%,
+                    #8B9862 50%,
+                    #8B9862 66.666%,
+                    #476098 66.666%,
+                    #476098 83.333%,
+                    #A7489B 83.333%);
+
+            /* Set thee background size and repeat properties. */
+            background-size: 57%;
+            background-repeat: repeat;
+
+            /* Use the text as a mask for the background. */
+            /* This will show the gradient as a text color rather than element bg. */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            /* Animate the text when loading the element. */
+            /* This animates it on page load and when hovering out. */
+            animation: rainbow-text-animation-rev 0.5s ease forwards;
+
+            cursor: pointer;
+        }
+
+        /* Add animation on hover. */
+        .rainbow-text:hover {
+            animation: rainbow-text-animation 1s ease forwards;
+        }
+
+        /* Move the background and make it larger. */
+        /* Animation shown when hovering over the text. */
+        @keyframes rainbow-text-animation {
+            0% {
+                background-size: 57%;
+                background-position: 0 0;
+            }
+
+            20% {
+                background-size: 57%;
+                background-position: 0 1em;
+            }
+
+            100% {
+                background-size: 300%;
+                background-position: -9em 1em;
+            }
+        }
+
+        /* Move the background and make it smaller. */
+        /* Animation shown when entering the page and after the hover animation. */
+        @keyframes rainbow-text-animation-rev {
+            0% {
+                background-size: 300%;
+                background-position: -9em 1em;
+            }
+
+            20% {
+                background-size: 57%;
+                background-position: 0 1em;
+            }
+
+            100% {
+                background-size: 57%;
+                background-position: 0 0;
+            }
+        }
+
+
+        .header h5 {
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+
+        .form1 {
+            margin-left: 10%;
+
+        }
+
+        form h2 {
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .left input[type="number"] {
+            padding: 5px;
+            font-size: 20px;
+            width: 35%;
+            min-width: 30%;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            line-height: 1.2;
+            border: 1px solid #ced4da;
+            border-radius: 0.15rem;
+        }
+
+        .right input[type="number"] {
+            padding: 5px;
+            font-size: 20px;
+            width: 70%;
+            min-width: 30%;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            line-height: 1.2;
+            border: 1px solid #ced4da;
+            border-radius: 0.15rem;
+        }
+
+        input:hover {
+            box-shadow: 0 0 0 1px rgba(107, 106, 106, 0.5),
+                0 2px 3px 0 rgba(0, 0, 0, .1);
+            ;
+        }
+
+        /* ##########SECTION -2 ########### */
+        h1.sectionTWOHeader {
+            font-size: 65px;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .form1 .button1 {
+            background-color: white;
+            font-size: 25px;
+            border-radius: 3px;
+            margin-top: 40px;
+            padding: 8px 22px;
+            transition-duration: 0.3s;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+
+            color: black;
+            border: 1px solid #838282;
+            /* Green */
+        }
+
+        .button1:hover {
+            background-color: #a5b1a5;
+            /* Green */
+            color: white;
+        }
+
+        .right {
+            margin-left: 50%;
+            margin-top: -428px;
+        }
+
+        .result21 h2 {
+            color: black;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            line-height: 1.2;
+            margin: 10px 25px 10px 25px;
+        }
+
+        /* ####### Section-3 ######## */
+        article p {
+            font-size: 35px;
+            padding: 20px;
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        footer.footsy {
+
+            padding-left: 10%;
+        }
+
+        .med {
+            background: #a5a5a5;
+            background: linear-gradient(rgb(126, 126, 126), rgb(207, 207, 207));
+        }
+
+        hr {
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+
+        footer.footsy h2 {
+            color: white;
+            font-size: 35px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        footer.footsy ul {
+            list-style: none;
+            text-align: left;
+            padding-left: 0;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        footer.footsy li {
+            color: white;
+            font-size: 20px;
+            line-height: 1.5;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .mobileStatck {
+            padding-left: 50px;
+        }
+
+        .mobileStatck2 h3 {
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 200;
+            line-height: 1.2;
+        }
+
+        footer.footsy ul a {
+            text-decoration: none;
+            text-decoration-line: none;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .lastA {
+            text-decoration: none;
+        }
+
+        .result h2 {
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+
+        }
+
+
+
+
+
+
+
+        /* ######## Mobile ######## */
+        @media screen and (max-width: 680px) {
+            ul.topnav li:not(:first-child) {
+                display: none;
+            }
+
+            ul.topnav li.dropdownIcon {
+                float: right;
+                display: block;
+                font-size: 20px;
+            }
+
+            ul.topnav.responsive li.dropdownIcon {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            ul.topnav.responsive {
+                position: relative;
+
+            }
+
+            ul.topnav.responsive li {
+                display: inline;
+                float: none;
+            }
+
+            ul.topnav.responsive li a {
+                display: block;
+                text-align: left;
+            }
+
+            ul.topnav.responsive li.topnav-right {
+                background-color: #a5a5a5;
+                display: block;
+                text-align: left;
+            }
+
+            .col-6,
+            .col-4,
+            .col-7,
+            .col-5,
+            .col-9 .col-12 {
+                width: 100%;
+                margin: 0;
+            }
+
+            #section-1-gradient .row .col-12 h1.large {
+                width: 100%;
+            }
+
+            div.mobileStatck {
+                width: 50%;
+                margin: 0;
+            }
+
+            div.mobileStatck2 {
+                width: 100%;
+                margin: 0;
+                margin-left: 40px;
+            }
+
+            footer.footsy {
+                margin: 0;
+                padding: 0;
+            }
+
+            .form1,
+            .header,
+            .iframe-right {
+                margin: 15px;
+            }
+
+            .left input[type="number"] {
+                padding: 5px;
+                font-size: 15px;
+                width: 75%;
+                min-width: 30%;
+            }
+
+            .right input[type="number"] {
+                padding: 5px;
+                font-size: 15px;
+                width: 75%;
+                min-width: 30%
+            }
+
+            .form1 h2 {
+                font-size: large;
+            }
+
+            .form1 .button1 {
+                font-size: 17px;
+            }
+
+            .right {
+                margin-left: 50%;
+            }
+
+            div.box {
+                display: block;
+                padding: 5px;
+            }
+
+            .right {
+                margin: 0;
+            }
+
+            #section-1-gradient .row .col-12 h1.large {
+                margin: 0;
+            }
+
+            .header h5 {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <nav>
         <ul class="topnav" id="dropdownClick">
             <li>
-                <a href="index.html">popcluster</a>
+                <a class="rainbow-text" href="index.html">popcluster</a>
             </li>
             <li>
                 <a href="aboutProject.html">About Project</a>
@@ -23,14 +574,14 @@
                 <a href="screenSnaps.html">Screen Snaps</a>
             </li>
 
-            
+
             <li class="topnav-right">
                 <a href="login.html">Login</a>
             </li>
             <li class="topnav-right">
                 <a href="about.html">About Us</a>
             </li>
-            
+
             <li class="dropdownIcon">
                 <a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a>
             </li>
@@ -41,41 +592,45 @@
             <div class="row">
                 <div class="col-12 leftSide-col">
                     <div class="header">
-                        <center><h5 class="small">{{alert}}</h5></center>
-                        <h1 class="large">Population Data Clustering</h1>
+                        <center>
+                            <h5 class="small">{{alert}}</h5>
+                        </center>
+                        <h1 class="large rainbow-text">Population Data Clustering</h1>
                     </div>
                     <br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <form class="form1" action="{{ url_for('predict')}}" method="post">
+                    <form name="PopForm" class="form1" action="{{ url_for('predict')}}" method="post">
                         <div>
                             <div class="left">
                                 <h2>Indians</h2>
-                                <input class="inputbox" type="number" required="required" placeholder="Number of Indians" name="indians">
-                                <h2>Foreigners</h2>
-                                <input class="inputbox" type="number" required="required"  placeholder="Numbers of Foreigners" name="foreigners">
+                                <input class="inputbox" type="number" required="required" id="i_i"
+                                    placeholder="Number of Indians" name="indians">
                                 <h2>Indian Males</h2>
-                                <input class="inputbox" type="number" required="required" placeholder="Number of Indian Males"
-                                    name="indians_male">
+                                <input class="inputbox" type="number" required="required" id="i_male"
+                                    placeholder="Number of Indian Males" name="indians_male">
                                 <h2>Indian Females</h2>
-                                <input class="inputbox" type="number" required="required" placeholder="Number of Indian Females"
-                                    name="indian_females">
+                                <input class="inputbox" type="number" required="required" onclick="iFemale()"
+                                    id="i_female" placeholder="Number of Indian Females" name="indian_females">
+                                    <h2>Foreigners</h2>
+                                <input class="inputbox" type="number" required="required"  id="f_f"
+                                    placeholder="Numbers of Foreigners" name="foreigners">
                             </div>
 
                             <div class="right">
                                 <h2>Foreigners Males</h2>
-                                <input class="inputbox-right" type="number" required="required" placeholder="Number of Foreigners Males"
-                                    name="foreigners_male">
+                                <input class="inputbox-right" type="number" required="required" id="f_male"
+                                    placeholder="Number of Foreigners Males" name="foreigners_male">
                                 <h2>Foreigners Females</h2>
-                                <input class="inputbox-right" type="number" required="required" placeholder="Number of Foreigners Females"
-                                    name="foreigners_females">
+                                <input class="inputbox-right" type="number" required="required" onclick="fFemale()"
+                                id="f_female" placeholder="Number of Foreigners Females" name="foreigners_females">
                                 <h2>Others</h2>
-                                <input class="inputbox-right" type="number" required="required" placeholder="Transgenders and others"
-                                    name="Others">
+                                <input class="inputbox-right" type="number" required="required" onclick="others()"
+                                   id= "o_o" placeholder="Transgenders and others" name="Others">
                                 <br>
-                                <br><button class="button1">Submit</button>
+                                <br><button class="button1 ">Submit</button>
                             </div>
                         </div>
                 </div>
@@ -88,7 +643,7 @@
                 <h2>{{ stat }}</h2>
             </center>
         </div>
-        
+
     </div>
 
 
@@ -133,6 +688,33 @@
                 x.className = "topnav";
             }
         }
+        function iFemale() {
+            var indians = document.getElementById("i_i").value;
+            var indians_male = document.getElementById("i_male").value;
+            var i_female= indians - indians_male;
+            var txt = document.getElementById("i_female").placeholder
+                = "Maybe - " + i_female;
+        }
+        function fFemale() {
+            var foreigners = document.getElementById("f_f").value;
+            var foreigners_male = document.getElementById("f_male").value;
+            var f_female= foreigners - foreigners_male;
+            var txt = document.getElementById("f_female").placeholder
+                = "Maybe - "+f_female;
+        }
+        function others() {
+            var txt = document.getElementById("o_o").placeholder
+                = "Fill 0 if no Other People";
+        }
+
+        // function ValidationForm() {
+        //     
+        //     
+        //     
+        //     let foreigners_male = document.forms["PopForm"]["foreigners_male"];
+        //     let i_female= indians - indians_male;
+        //     return i_female;
+        // }
     </script>
 </body>
 
