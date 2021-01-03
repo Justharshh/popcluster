@@ -31,6 +31,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609060654013</updated>
       <workItem from="1609060661204" duration="826000" />
+      <workItem from="1609697117962" duration="109000" />
     </task>
     <task id="LOCAL-00001" summary="27-12">
       <created>1609060892560</created>
@@ -39,7 +40,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609060892560</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hghbhttyht">
+      <created>1609697164736</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609697164736</updated>
+    </task>
+    <task id="LOCAL-00003" summary="hghbhttyht">
+      <created>1609697195694</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609697195694</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -55,9 +70,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="27-12" />
-    <option name="LAST_COMMIT_MESSAGE" value="27-12" />
+    <MESSAGE value="hghbhttyht" />
+    <option name="LAST_COMMIT_MESSAGE" value="hghbhttyht" />
   </component>
 </project>
