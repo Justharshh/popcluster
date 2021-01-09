@@ -32,6 +32,7 @@
       <updated>1609060654013</updated>
       <workItem from="1609060661204" duration="826000" />
       <workItem from="1609697117962" duration="109000" />
+      <workItem from="1609697303028" duration="328000" />
     </task>
     <task id="LOCAL-00001" summary="27-12">
       <created>1609060892560</created>
@@ -54,7 +55,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609697195694</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fvdf">
+      <created>1609697358760</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609697358760</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fvdf">
+      <created>1609697379415</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609697379415</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +90,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="27-12" />
     <MESSAGE value="hghbhttyht" />
-    <option name="LAST_COMMIT_MESSAGE" value="hghbhttyht" />
+    <MESSAGE value="fvdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="fvdf" />
   </component>
 </project>
