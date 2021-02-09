@@ -1,0 +1,221 @@
+/*####### Nav Bar #######*/
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    background-color: #eee;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav .topnav li {
+    list-style: none;
+    float: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+ul.topnav li.topnav-right {
+    background-color: #a5a5a5;
+    float: right;
+}
+
+ul.topnav li.topnav-right a {
+    color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+ul.topnav li a {
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+ul.topnav li a:hover {
+    background-color: #5c5d5f;
+    /* border-radius: 4px; */
+    color: #fff;
+}
+
+ul.topnav li.dropdownIcon {
+    display: none;
+}
+
+
+
+
+#section-1b-gradient {
+    background: #a5a5a5;
+    background: linear-gradient(#eeeeee, rgb(126, 126, 126));
+}
+
+.container.signin-container {
+    padding-top: 8%;
+}
+
+.signin-card {
+    padding: 40x 0px 20px;
+    background-color: #f3f2f2;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.signin-img {
+    display: block;
+    margin: auto;
+    padding: 0 2rem 2rem;
+}
+
+.signin-form {
+    max-width: 350px;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.signin-btn {
+    width: 100%;
+    margin-top: 1.1rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.errorRes p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-left: 15%;
+    padding-top: 2%;
+
+}
+
+footer.footsy {
+
+    padding-left: 10%;
+}
+
+.med {
+    background: #a5a5a5;
+    background: linear-gradient(rgb(126, 126, 126), rgb(207, 207, 207));
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+footer.footsy h2 {
+    color: white;
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+footer.footsy ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+footer.footsy li {
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.mobileStatck {
+    padding-left: 50px;
+}
+
+.mobileStatck2 h3 {
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+footer.footsy ul a {
+    text-decoration: none;
+    text-decoration-line: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.footy {
+    margin-right: 0;
+}
+
+
+
+
+@media screen and (max-width: 680px) {
+    ul.topnav li:not(:first-child) {
+        display: none;
+    }
+
+    ul.topnav li.dropdownIcon {
+        float: right;
+        display: block;
+    }
+
+    ul.topnav.responsive li.dropdownIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    ul.topnav.responsive {
+        position: relative;
+
+    }
+
+    ul.topnav.responsive li {
+        display: inline;
+        float: none;
+    }
+
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+
+    ul.topnav.responsive li.topnav-right {
+        background-color: #a5a5a5;
+        display: block;
+        text-align: left;
+    }
+
+    .errorRes p {
+        padding-left: 0;
+
+    }
+
+    .mobileStatck2 {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15%;
+        flex: none;
+
+    }
+}
